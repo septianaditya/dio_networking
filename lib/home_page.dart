@@ -5,28 +5,28 @@ import 'package:dio_networking/model/response/data.dart';
 import 'package:dio_networking/model/response/user.dart';
 import 'package:flutter/material.dart';
 
-class HomePageArguments {
+class DetailPageArguments {
   final String userId;
 
-  HomePageArguments(this.userId);
+  DetailPageArguments(this.userId);
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class DetailPage extends StatefulWidget {
+  const DetailPage({super.key});
 
   static const routeName = '/detail';
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<DetailPage> createState() => _DetailPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _DetailPageState extends State<DetailPage> {
   final DioClient _client = DioClient();
 
   @override
   Widget build(BuildContext context) {
     final args =
-        ModalRoute.of(context)!.settings.arguments as HomePageArguments;
+        ModalRoute.of(context)!.settings.arguments as DetailPageArguments;
 
     return Scaffold(
       appBar: AppBar(

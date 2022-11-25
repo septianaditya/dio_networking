@@ -4,14 +4,14 @@ import 'package:dio_networking/model/response/data.dart';
 // import 'package:dio_networking/model/request/user_info.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class UserListPage extends StatefulWidget {
+  const UserListPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<UserListPage> createState() => _UserListPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _UserListPageState extends State<UserListPage> {
   final DioClient _client = DioClient();
   // final TextEditingController _nameController = TextEditingController();
   // final TextEditingController _jobController = TextEditingController();
@@ -78,8 +78,8 @@ class _LoginPageState extends State<LoginPage> {
                             trailing: const Icon(Icons.more_vert),
                           ),
                           onTap: () {
-                            Navigator.pushNamed(context, HomePage.routeName,
-                                arguments: HomePageArguments('${user.id}'));
+                            Navigator.pushNamed(context, DetailPage.routeName,
+                                arguments: DetailPageArguments('${user.id}'));
                           },
                         );
                       },

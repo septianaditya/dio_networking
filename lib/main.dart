@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
-        HomePage.routeName: (context) => const HomePage(),
+        DetailPage.routeName: (context) => const DetailPage(),
       },
-      home: const LoginPage(),
+      home: const UserListPage(),
     );
   }
 }
